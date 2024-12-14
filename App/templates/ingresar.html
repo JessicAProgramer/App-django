@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+
+
+{% block contect %}
+
+<main class="container">
+    <div class="row">
+        <div class="col-md-4 offset-md-4 py-5">
+            <h1 class="text-center">Ingresar</h1>
+                {{error}}
+            <form method="POST" class="card card-body">
+                {% csrf_token %}
+                <div class="mb-3">
+                    <label for="username">Usuario:</label>
+                    <input type="text" id="username" name="username" class="form-control" placeholder="Escribe tu usuario">
+                </div>
+                <div class="mb-3">
+                    <label for="password">Constraseña:</label>
+                    <input type="password" id="password" name="password" class="form-control" placeholder="Escribe tu contraseña"> 
+                </div>
+                <button class="btn btn-primary">
+                    Ingresar
+                </button>
+            </form>
+        </div>
+    </div>
+</main>
+
+{% endblock %}
